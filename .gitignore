@@ -1,0 +1,16 @@
+.dep/
+Makefile-generic-f103
+Makefile-maple-mini
+bootloader_defs.h
+build/
+config.h
+halconf.h
+keymap_plain.c
+led.c
+matrix.c
+ld/
+!ld/STM32F103x8.ld
+boards/
+!boards/GENERIC_STM32_F103_PC13/board.c
+!boards/GENERIC_STM32_F103_PC13/board.h
+!boards/GENERIC_STM32_F103_PC13/board.mk
