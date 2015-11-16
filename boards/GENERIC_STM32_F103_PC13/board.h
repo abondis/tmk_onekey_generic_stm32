@@ -37,7 +37,7 @@
 /*
  * MCU type, supported types are defined in ./os/hal/platforms/hal_lld.h.
  */
-#define STM32F103x6
+#define STM32F103xB
 
 /*
  * IO pins assignments
@@ -48,8 +48,8 @@
 
 /* on-board */
 
-#define GPIOB_LED               1
-#define GPIOB_USB_DISC          9
+#define GPIOC_LED               13
+#define GPIOB_USB_DISC          10
 #define GPIOD_OSC_IN            0
 #define GPIOD_OSC_OUT           1
 
@@ -58,7 +58,7 @@
 // pin 1:       AV+
 // pin 2:       AV-
 // pin 3:       VBAT
-#define GPIOC_TAMPER_RTC        13      // pin 4
+//#define GPIOC_TAMPER_RTC        13      // pin 4
 #define GPIOC_OSC32_IN          14      // pin 5
 #define GPIOC_OSD32_OUT         15      // pin 6
 // pin 7:       RESET
@@ -138,19 +138,19 @@
 /*
  * Port B setup.
  * Everything input with pull-up except:
- * PB1    - Push Pull output  (LED).
- * PB9    - Push Pull output  (USB switch).
+ * PB10    - Push Pull output  (USB switch).
  */
-#define VAL_GPIOBCRL            0x88888838      /*  PB7...PB0 */
-#define VAL_GPIOBCRH            0x88888838      /* PB15...PB8 */
+#define VAL_GPIOBCRL            0x88888888      /*  PB7...PB0 */
+#define VAL_GPIOBCRH            0x88888388      /* PB15...PB8 */
 #define VAL_GPIOBODR            0xFFFFFFFF
 
 /*
  * Port C setup.
  * Everything input with pull-up except:
+ * PC13    - Push Pull output  (LED).
  */
 #define VAL_GPIOCCRL            0x88888888      /*  PC7...PC0 */
-#define VAL_GPIOCCRH            0x88888888      /* PC15...PC8 */
+#define VAL_GPIOCCRH            0x88388888      /* PC15...PC8 */
 #define VAL_GPIOCODR            0xFFFFFFFF
 
 /*
